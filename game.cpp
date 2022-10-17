@@ -18,6 +18,11 @@ Game::Game()
 Game::~Game()
 {
 	delete m_player;
+	for (auto e : m_enemies)
+	{
+		delete e;
+	}
+	m_enemies.clear();
 }
 
 void Game::selectClass()
